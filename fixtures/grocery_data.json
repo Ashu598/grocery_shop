@@ -1,0 +1,155 @@
+[
+  {
+    "model": "store.category",
+    "pk": 1,
+    "fields": {
+      "name": "Fruits & Vegetables",
+      "slug": "fruits-vegetables"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 2,
+    "fields": {
+      "name": "Dairy & Bakery",
+      "slug": "dairy-bakery"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 3,
+    "fields": {
+      "name": "Beverages",
+      "slug": "beverages"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 4,
+    "fields": {
+      "name": "Grains & Pulses",
+      "slug": "grains-pulses"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 5,
+    "fields": {
+      "name": "Snacks",
+      "slug": "snacks"
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Fresh Tomatoes (1kg)",
+      "slug": "fresh-tomatoes",
+      "price": "40.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Bananas (1 dozen)",
+      "slug": "bananas",
+      "price": "60.00",
+      "available": true,
+      "image": "products/banana.png"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Amul Milk (1L)",
+      "slug": "amul-milk",
+      "price": "55.00",
+      "available": true,
+      "image": "products/amul_img.jpg"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "Brown Bread (400g)",
+      "slug": "brown-bread",
+      "price": "45.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "name": "Tata Tea (500g)",
+      "slug": "tata-tea",
+      "price": "220.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "category": 3,
+      "name": "Bru Instant Coffee (100g)",
+      "slug": "bru-coffee",
+      "price": "150.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "category": 4,
+      "name": "Basmati Rice (5kg)",
+      "slug": "basmati-rice",
+      "price": "550.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "category": 4,
+      "name": "Toor Dal (1kg)",
+      "slug": "toor-dal",
+      "price": "120.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "category": 5,
+      "name": "Lay's Chips (100g)",
+      "slug": "lays-chips",
+      "price": "30.00",
+      "available": true
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "category": 5,
+      "name": "Parle-G Biscuits (200g)",
+      "slug": "parle-g",
+      "price": "25.00",
+      "available": true
+    }
+  }
+]

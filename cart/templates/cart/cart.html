@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Your Cart · GroceryShop{% endblock %}
+{% block content %}
+<h2>Your Cart</h2>
+{% if cart|length == 0 %}
+  <p>Your cart is empty.</p>
+{% else %}
+  <table class="table align-middle">
+    <thead><tr><th>Product</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr></thead>
+    <tbody>
+      {% for item in cart %}
+      <tr>
+        <td><a href="{% url 'store:product_detail' item.product.slug %}">{{ item.product.name }}</a></td>
+        <td>₹ {{ item.price }}</td>
+        <td>
+          <form method="post" action="{% url 'cart:update' item.product.id %}" class="d-inline-flex">
+            {% csrf_token %}
+            <input type="number" name="qty" min="1" value="{{ item.qty }}" class="form-control form-control-sm" style="width:80px;">
+            <button class="btn btn-sm btn-outline-secondary ms-2">Update</button>
+          </form>
+        </td>
+        <td>₹ {{ item.total }}</td>
+        <td>
+          <form method="post" action="{% url 'cart:remove' item.product.id %}">
+            {% csrf_token %}
+            <button class="btn btn-sm btn-outline-danger">Remove</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-between">
+    <a href="{% url 'store:product_list' %}" class="btn btn-outline-secondary">Continue Shopping</a>
+    <div>
+      <span class="me-3 fw-semibold">Grand Total: ₹ {{ cart.get_total_price }}</span>
+      <a href="{% url 'orders:checkout' %}" class="btn btn-primary">Checkout</a>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}
